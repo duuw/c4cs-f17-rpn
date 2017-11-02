@@ -3,6 +3,6 @@ python:
   - 3.5
 install: 
   - pip install coveralls  
-script:  make test
+script: coverage make test
 after_success:
   - coveralls
