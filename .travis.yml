@@ -4,6 +4,6 @@ python:
 before_install:
   - pip install coverage 
   - pip install coveralls  
-script: coverage run make test
+script: make test
 after_success:
   - coveralls
