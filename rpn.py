@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import operator
 import readline
-import sys
-from termcolor import colored, cprint
 
 ops = {
     '+': operator.add,
@@ -24,20 +22,11 @@ def calculate(string):
             result = function(arg1, arg2)
             stack.append(result)
     print(stack)
-    res = stack.pop()
-    if res < 0:
-        print(colored(res, 'red', attrs=['bold']))
-    else:
-        print(colored(res, 'white', attrs=['bold']))
-            
+    return stack.pop()
+       
 def main():
     while True:
-        userInput = input("rpn calc> ")
-        if userInput == 'quit':
-             print("thanks for using rpn calc")
-             exit()
-        else:
-             calculate(userInput)
+        calculate(input("rpn calc> "))
 
 if __name__ == '__main__':
     main()
