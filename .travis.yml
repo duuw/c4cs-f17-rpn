@@ -1,7 +1,8 @@
 language: python
 python:
   - 3.5
-before_install:
+before_script:
+  - pip install -r test_requirements.txt --use-mirrors
   - pip install coverage 
   - pip install coveralls  
 script: make test
