@@ -19,6 +19,10 @@ def calculate(string):
             arg2 = stack.pop()
             arg1 = stack.pop()
             function = ops[token]
+            if token == '/':
+                if arg2 == 0:
+                    print("undefined")
+                    exit()
             result = function(arg1, arg2)
             stack.append(result)
     print(stack)
