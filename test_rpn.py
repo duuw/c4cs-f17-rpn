@@ -12,5 +12,5 @@ class TestBasics(unittest.TestCase):
         self.assertEqual(2, result)
 
     def test_exponent(self):
-        result = rpn.calculate('2 1 ^')
-        self.assertEqual(2, result)
+        result = rpn.calculate('4 1 ^')
+        self.assertEqual(4, result)
